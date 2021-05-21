@@ -6,15 +6,19 @@ import { AppComponent } from './app.component';
 
 import { ChartsModule } from 'ng2-charts';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {SecondComponent} from './second-r/second-r.component'
+
+//import { HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
-    AppComponent,DashboardComponent
+    AppComponent,DashboardComponent,SecondComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    //HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

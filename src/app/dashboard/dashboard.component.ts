@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
-import { Color, Label } from 'ng2-charts';
+import { ChartDataSets, ChartOptions, ChartType ,ChartConfiguration} from 'chart.js';
+import { Color, BaseChartDirective, Label } from 'ng2-charts';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +9,8 @@ import { Color, Label } from 'ng2-charts';
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent  {
+
+
   public lineChartData: ChartDataSets[] = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
   ];
@@ -22,11 +25,36 @@ export class DashboardComponent  {
     },
   ];
   public lineChartLegend = true;
-  public lineChartType: ChartType ="line";
+  public lineChartType: ChartType="line";
   public lineChartPlugins = [];
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  public changeColor(): void {
+    this.lineChartColors[0].borderColor = 'green';
+    this.lineChartColors[0].backgroundColor = `rgba(0, 255, 0, 0.3)`;
+  }
+  public changeTypeBar(): void {
+       this.lineChartType= 'bar';
+     }
+  
+public changeTypeLine(): void {
+  this.lineChartType= 'line';
+}
+
+
+public changeData(): void {
+  this.lineChartData=[
+    { data: [Math.round(Math.random() * 100),Math.round(Math.random() * 100), Math.round(Math.random() * 100), Math.round(Math.random() * 100), Math.round(Math.random() * 100), Math.round(Math.random() * 100), Math.round(Math.random() * 100)], label: 'Series B' }
+  ];
+}
+
+
+
+
+
+
 }

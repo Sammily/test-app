@@ -1,15 +1,26 @@
-<div style="display: block">
-  <canvas
-    baseChart
-    width="400"
-    height="400"
-    [datasets]="lineChartData"
-    [labels]="lineChartLabels"
-    [options]="lineChartOptions"
-    [colors]="lineChartColors"
-    [legend]="lineChartLegend"
-    [chartType]="lineChartType"
-    [plugins]="lineChartPlugins"
-  >
-  </canvas>
+<div
+  class="chart-container"
+  style="position: relative; height: 40vh; width: 80vw"
+>
+  <div style="display: block">
+    <canvas
+      baseChart
+      width="400"
+      height="400"
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [legend]="lineChartLegend"
+      [chartType]="lineChartType"
+      [plugins]="lineChartPlugins"
+    >
+    </canvas>
+  </div>
+  <div>
+    <button (click)="changeColor()">Recolor</button>
+    <button (click)="changeData()">Randomize</button>
+  </div>
+  <button (click)="changeTypeBar()">Bar</button>
+  <button (click)="changeTypeLine()">Line</button>
 </div>
