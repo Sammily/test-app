@@ -1,26 +1,39 @@
-<div
-  class="chart-container"
-  style="position: relative; height: 40vh; width: 80vw"
->
-  <div style="display: block">
-    <canvas
-      baseChart
-      width="400"
-      height="400"
-      [datasets]="lineChartData"
-      [labels]="lineChartLabels"
-      [options]="lineChartOptions"
-      [colors]="lineChartColors"
-      [legend]="lineChartLegend"
-      [chartType]="lineChartType"
-      [plugins]="lineChartPlugins"
-    >
-    </canvas>
-  </div>
-  <div>
-    <button (click)="changeColor()">Recolor</button>
-    <button (click)="changeData()">Randomize</button>
-  </div>
-  <button (click)="changeTypeBar()">Bar</button>
-  <button (click)="changeTypeLine()">Line</button>
-</div>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <div class="chart-container">
+      <div style="display: block">
+        <canvas
+          baseChart
+          width="300"
+          height="300"
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"
+          [plugins]="lineChartPlugins"
+          #chart1
+        >
+        </canvas>
+      </div>
+
+      <button mat-raised-button color="primary" (click)="changeColor()">
+        Recolor
+      </button>
+
+      <button mat-raised-button color="primary" (click)="changeData()">
+        Randomize
+      </button>
+      <button mat-raised-button color="primary" (click)="changeType()">
+        Change type
+      </button>
+      <button mat-raised-button color="primary" (click)="hideOne()">
+        Hide
+      </button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+  <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+  <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+</mat-grid-list>
