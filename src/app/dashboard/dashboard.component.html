@@ -1,4 +1,4 @@
-<mat-grid-list cols="2" rowHeight="2:1">
+<mat-grid-list cols="2" rowHeight="400px">
   <mat-grid-tile>
     <div class="chart-container">
       <div style="display: block">
@@ -28,9 +28,16 @@
       <button mat-raised-button color="primary" (click)="changeType()">
         Change type
       </button>
-      <button mat-raised-button color="primary" (click)="hideOne()">
-        Hide
+      <div><button mat-raised-button color="primary" (click)="hideOne(0)">
+        Hide 1
       </button>
+      <button mat-raised-button color="primary" (click)="hideOne(1)">
+        Hide 2
+      </button>
+      <button mat-raised-button color="primary" (click)="hideOne(2)">
+        Hide 3
+      </button></div>
+      
     </div>
   </mat-grid-tile>
   <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
