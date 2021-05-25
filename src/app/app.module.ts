@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { ChartsModule } from 'ng2-charts';
 import { DashboardComponent} from './dashboard/dashboard.component';
+import {ChartComponent} from './dashboard/chart/chart.components';
 import {SecondComponent} from './second-r/second-r.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatButtonModule} from '@angular/material/button';
@@ -20,7 +21,7 @@ import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,DashboardComponent,SecondComponent
+    AppComponent,DashboardComponent,SecondComponent,ChartComponent 
   ],
   imports: [
     BrowserModule,

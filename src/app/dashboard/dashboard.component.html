@@ -1,46 +1,6 @@
 <mat-grid-list cols="2" rowHeight="400px">
-  <mat-grid-tile>
-    <div class="chart-container">
-      <div style="display: block">
-        <canvas
-          baseChart
-          width="300"
-          height="300"
-          [datasets]="lineChartData"
-          [labels]="lineChartLabels"
-          [options]="lineChartOptions"
-          [colors]="lineChartColors"
-          [legend]="lineChartLegend"
-          [chartType]="lineChartType"
-          [plugins]="lineChartPlugins"
-          #chart1
-        >
-        </canvas>
-      </div>
-
-      <button mat-raised-button color="primary" (click)="changeColor()">
-        Recolor
-      </button>
-
-      <button mat-raised-button color="primary" (click)="changeData()">
-        Randomize
-      </button>
-      <button mat-raised-button color="primary" (click)="changeType()">
-        Change type
-      </button>
-      <div><button mat-raised-button color="primary" (click)="hideOne(0)">
-        Hide 1
-      </button>
-      <button mat-raised-button color="primary" (click)="hideOne(1)">
-        Hide 2
-      </button>
-      <button mat-raised-button color="primary" (click)="hideOne(2)">
-        Hide 3
-      </button></div>
-      
-    </div>
-  </mat-grid-tile>
-  <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
-  <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
-  <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+  <mat-grid-tile><app-chart #all></app-chart></mat-grid-tile>
+  <mat-grid-tile><app-chart #first></app-chart></mat-grid-tile>
+  <mat-grid-tile><app-chart #two></app-chart></mat-grid-tile>
+  <mat-grid-tile><app-chart #three></app-chart></mat-grid-tile>
 </mat-grid-list>
