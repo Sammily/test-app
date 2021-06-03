@@ -10,3 +10,13 @@ a {
   color: white;
   text-decoration: none;
 }
+h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  span {
+    font-size: 15px;
+  }
+}

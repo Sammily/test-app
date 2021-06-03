@@ -1,6 +1,25 @@
-<mat-grid-list cols="2" rowHeight="400px">
-  <mat-grid-tile><app-chart #all></app-chart></mat-grid-tile>
-  <mat-grid-tile><app-chart #first></app-chart></mat-grid-tile>
-  <mat-grid-tile><app-chart #two></app-chart></mat-grid-tile>
-  <mat-grid-tile><app-chart #three></app-chart></mat-grid-tile>
+<!-- -->
+
+<mat-grid-list [cols]="breakpoint" rowHeight="400px">
+  <mat-grid-tile
+    ><app-chart #all [data]="allData" [lineChartLegend]="hideLegend"></app-chart
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><app-chart
+      #first
+      [data]="dataChart1"
+      [lineChartLegend]="hideLegend"
+    ></app-chart
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><app-chart
+      #two
+      [data]="dataChart2"
+      [lineChartLegend]="hideLegend"
+    ></app-chart
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><app-chart #three [data]="dataChart3" [lineChartLegend]="hideLegend">
+    </app-chart
+  ></mat-grid-tile>
 </mat-grid-list>
