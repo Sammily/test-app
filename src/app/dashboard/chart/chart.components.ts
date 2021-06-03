@@ -57,6 +57,7 @@ export class ChartComponent {
     'June',
     'July',
   ];
+
   public lineChartOptions: ChartOptions = {
     responsive: true,
     legend: { position: 'right' },
@@ -82,10 +83,11 @@ export class ChartComponent {
     }
     this.chart.update();
   }
-
+  //random #color
   public random1(): string {
     return Math.floor(Math.random() * 16777215).toString(16);
   }
+  //random rgb(color)
   public random2(): number {
     return Math.floor(Math.random() * 256);
   }
@@ -105,11 +107,6 @@ export class ChartComponent {
 
   public randomNumber(): number {
     return Math.round(Math.random() * 100);
-  }
-
-  @Input() show: boolean = true;
-  public showCharts(show: boolean) {
-    this.show = show;
   }
 
   /*
